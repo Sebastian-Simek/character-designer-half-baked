@@ -16,7 +16,7 @@ let headCount = 0;
 let middleCount = 0;
 let bottomCount = 0;
 
-let catchPhraseList = [];
+let catchPhraseList = [''];
 
 headDropdown.addEventListener('change', () => {
     headEl.style.backgroundImage = `url('../assets/${headDropdown.value}-head.png')`;
@@ -42,7 +42,7 @@ catchphraseButton.addEventListener('click', () => {
     catchPhraseList.push(catchphraseInput.value);
     catchphraseInput.value = '';
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
-
+    displayCatchphrases();
 });
 
 function displayStats() {
@@ -50,10 +50,16 @@ function displayStats() {
 }
 
 function displayCatchphrases() {
-    // clear out the DOM for the currently displayed catchphrases
+    
 
     // loop through each catchphrase in state
-   
+    for (let catchphraseOut of catchPhraseList) {
+        if (catchPhraseList[catchphraseOut]) {
+            return catchphraseOut;
+        } console.log(catchphraseOut);
+    } 
+    
+        
     // and for each catchphrase
     
     // create an HTML element with the catchphrase as its text content
