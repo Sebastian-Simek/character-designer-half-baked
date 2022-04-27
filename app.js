@@ -18,22 +18,21 @@ let bottomCount = 0;
 headDropdown.addEventListener('change', () => {
     headEl.style.backgroundImage = `url('../assets/${headDropdown.value}-head.png')`;
     headCount++;    
-
-    // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 
 middleDropdown.addEventListener('change', () => {
     middleEl.style.backgroundImage = `url(../assets/${middleDropdown.value}-middle.png)`;
     middleCount++;
-    // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 
 bottomDropdown.addEventListener('change', () => {
     bottomEl.style.backgroundImage = `url(../assets/${bottomDropdown.value}-pants.png)`;
     bottomCount++;
-    // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 catchphraseButton.addEventListener('click', () => {
@@ -42,13 +41,13 @@ catchphraseButton.addEventListener('click', () => {
     // push the new catchphrase to the catchphrase array in state
 
     // clear out the form input's value so it's empty to the user
-   
+    
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
 
 });
 
 function displayStats() {
-    // text content of the reportEl to tell the user how many times they've changed each piece of the state
+    reportEl.textContent = `you have changed the head ${headCount} times, the body ${middleCount} times, and the pants ${bottomCount} times`;
 }
 
 function displayCatchphrases() {
