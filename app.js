@@ -14,6 +14,8 @@ const catchphraseButton = document.getElementById('catchphrase-button');
 // set state for all of the character's catchphrases
 
 headDropdown.addEventListener('change', () => {
+    console.log('we are changing something');
+    headEl.style.backgroundImage = `url('')`;
     // get the value of the head dropdown
 
     // increment the head change count state
