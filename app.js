@@ -15,6 +15,9 @@ const catchphraseButton = document.getElementById('catchphrase-button');
 let headCount = 0;
 let middleCount = 0;
 let bottomCount = 0;
+
+let catchPhraseList = [];
+
 headDropdown.addEventListener('change', () => {
     headEl.style.backgroundImage = `url('../assets/${headDropdown.value}-head.png')`;
     headCount++;    
@@ -36,12 +39,8 @@ bottomDropdown.addEventListener('change', () => {
 });
 
 catchphraseButton.addEventListener('click', () => {
-    // get the value of the catchphrase input
-    
-    // push the new catchphrase to the catchphrase array in state
-
-    // clear out the form input's value so it's empty to the user
-    
+    catchPhraseList.push(catchphraseInput.value);
+    catchphraseInput.value = '';
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
 
 });
