@@ -50,13 +50,11 @@ function displayStats() {
 }
 
 function displayCatchphrases() {
-    
 
-    // loop through each catchphrase in state
     for (let catchphraseOut of catchPhraseList) {
         if (catchPhraseList[catchphraseOut]) {
             return catchphraseOut;
-        } console.log(catchphraseOut);
+        } catchphrasesEl.append(catchphraseOut);
     } 
     
         
