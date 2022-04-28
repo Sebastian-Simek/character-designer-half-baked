@@ -49,7 +49,7 @@ function displayStats() {
 function displayCatchphrases() {
     catchphrasesEl.textContent = '';
     for (let catchphraseOut of catchPhraseList) {
-        const newEl = document.createElement('li');       
+        const newEl = document.createElement('div');       
         newEl.textContent = catchphraseOut;
         catchphrasesEl.append(newEl);
     }
