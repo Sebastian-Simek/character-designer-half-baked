@@ -46,20 +46,12 @@ catchphraseButton.addEventListener('click', () => {
 function displayStats() {
     reportEl.textContent = `you have changed the head ${headCount} times, the body ${middleCount} times, and the pants ${bottomCount} times`;
 }
-// let newTag = document.createElement('div' ['hi']);
 
 function displayCatchphrases() {
-    // catchPhraseList = [''];
+    catchphrasesEl.textContent = '';
     for (let catchphraseOut of catchPhraseList) {
-        if (catchPhraseList[catchphraseOut]) {
-            return catchphraseOut;
-        } catchphrasesEl.join().append(catchphraseOut);
-    }   
-    
-        
-    // and for each catchphrase
-    
-    // create an HTML element with the catchphrase as its text content
-    
-    // and append that HTML element to the cleared-out DOM
+        const newEl = document.createElement('li');       
+        newEl.textContent = catchphraseOut;
+        catchphrasesEl.append(newEl);
+    }
 }
