@@ -1,4 +1,3 @@
-// import functions and grab DOM elements
 const headDropdown = document.getElementById('head-dropdown');
 const middleDropdown = document.getElementById('middle-dropdown');
 const bottomDropdown = document.getElementById('bottom-dropdown');
@@ -14,7 +13,7 @@ let headCount = 0;
 let middleCount = 0;
 let bottomCount = 0;
 
-let catchPhraseList = [''];
+let catchPhraseList = [];
 
 
 headDropdown.addEventListener('change', () => {
@@ -39,8 +38,8 @@ bottomDropdown.addEventListener('change', () => {
 
 catchphraseButton.addEventListener('click', () => {
     catchPhraseList.push(catchphraseInput.value);
-    catchphraseInput.value = '';
     displayCatchphrases();
+    // catchphraseInput.value = '';
 });
 
 function displayStats() {
